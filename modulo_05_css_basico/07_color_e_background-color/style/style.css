@@ -1,4 +1,11 @@
 #paragrafo1 {
+    /* color: green; */
     color: red;
+    text-decoration: underline;
     background-color: rgb(255, 255, 0, 0.5);
+}
+
+p {
+    /* color: blue; */
+    
 }
