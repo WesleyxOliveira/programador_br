@@ -1,0 +1,17 @@
+p {
+    color: pink;
+    background-color: yellow;
+}
+
+#paragrafo1 {
+    color: red;
+    /* background-color: transparent; */
+}
+
+.fundo-azul {
+    background-color: blue;
+}
+
+.texto-amarelo {
+    color: yellow;
+}
