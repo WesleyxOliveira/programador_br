@@ -1,16 +1,19 @@
 .container {
-    
+    font-size: 10px;
 }
 
 .exemplo1 {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .exemplo2 {
-    font-size: 2rem;
+    font-size: 2em;
 } 
 
 .exemplo3 {
-    
+    font-size: 2rem;
 }
 
+html {
+    font-size: 20px;
+}

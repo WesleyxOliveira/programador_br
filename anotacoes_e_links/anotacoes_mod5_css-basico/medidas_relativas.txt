@@ -1,3 +1,52 @@
-medidas relativas
+1 - medidas relativas
 
 em - é uma medida relativa ao tamanho que a font deveria ter, por exemplo, se parágrafo tem o tamanho de 16px(padrão) e eu colocar ele para ter 2em, então o tamanho dele será 32px, agora se um parágrafo está dentro de uma div por exemplo e eu defino a propriedade font-size da div como 10px por exemplo e o do parágrafo como 2em, então o tamanho da fonte do parágrafo será de 20px.
+
+rem(root element) é um tamenho relativo aos tamanhos que já vem definidos pelo html, por exemplo a tag <p> pixels e <h1> 32 pixels, se eu colocar o parágrafo e o h1 como 2rem, o parágrafo ficará com 32 pixesl e o h1 com 64 pixels. Posso tbm alterar o tamanho padrão dos elementos root alterando o font-size do html, por Exemplo:
+
+html {
+	font-size: 20px;
+}
+
+
+
+2 - text-tranform
+
+*capitalize - pega cada palavra e transforma a primeira letra de cada em maiúscula.
+
+*lowercase - pega todas as letras do meu texto e deixa todas elas em minúsculas.
+
+
+*upercase - pega todas as letras do meu texto e deixa todas em maiúsculas.
+
+
+
+3 - text-decoration
+
+* underline - insere uma linha abaixo da palavra
+
+* overline - insere uma linha sobre a palavra
+
+* line-through - insere uma linha no meio da palavra(risca a palavra)
+
+
+4 - letter-spacing
+
+* 10px - deixa um espaçamento maior entre as letras, posso tbm deixar um espaçamento negativo.
+
+
+5 - word-spacing 
+
+* 10 px - semelhando ao letter spacing mas agora espaçando as palavras ao invés das letras.
+
+
+6 - line-height 
+
+Muda o espaçamento entre as linhas (referência é o tamanho da fonte)
+
+
+7 - text-indent
+
+Muda a identação do parágrafo apenas da esqueda para a direita, não funciona da direita para a esquerda, se colocar o valor negativo ele vai sumindo para a esquerda.
+
+
