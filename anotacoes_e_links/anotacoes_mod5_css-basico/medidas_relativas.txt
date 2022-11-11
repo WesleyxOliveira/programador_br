@@ -1,0 +1,3 @@
+medidas relativas
+
+em - é uma medida relativa ao tamanho que a font deveria ter, por exemplo, se parágrafo tem o tamanho de 16px(padrão) e eu colocar ele para ter 2em, então o tamanho dele será 32px, agora se um parágrafo está dentro de uma div por exemplo e eu defino a propriedade font-size da div como 10px por exemplo e o do parágrafo como 2em, então o tamanho da fonte do parágrafo será de 20px.
