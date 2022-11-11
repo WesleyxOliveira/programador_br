@@ -50,3 +50,8 @@ Muda o espaçamento entre as linhas (referência é o tamanho da fonte)
 Muda a identação do parágrafo apenas da esqueda para a direita, não funciona da direita para a esquerda, se colocar o valor negativo ele vai sumindo para a esquerda.
 
 
+8 - font-variant
+
+O font variant - small-caps deixa todas as letras maiúsculas mas mantém as letras que já eram miúsculas maiores que as outras.
+
+
