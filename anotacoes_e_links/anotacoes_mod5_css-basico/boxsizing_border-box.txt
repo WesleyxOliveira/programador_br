@@ -1,0 +1,10 @@
+Box sizing
+
+
+box sizing - border-box;
+
+Usando a propriedade box-sizing: border-box; em um elemento eu vou garantir que ele vai manter as proporções de width e height do elemento msm que eu adicione padding e border nele. A propriedade margin continua funcionando normalmente já que não altera o tamanho do elemento.
+
+box-sizing: content-box
+
+cotent-box é o valor padrão de box-sizinhg e se for utilizada essa propriedade com esse valor ou se nada for definido na propriedade box sizig, quando for adicionado um valor de padding e border o elemento ocupará um maior espaço na tela.

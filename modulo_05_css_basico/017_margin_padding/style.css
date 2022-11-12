@@ -1,0 +1,21 @@
+#primeira {
+    height: 100px;
+    background-color: blue;
+}
+
+#segunda {
+    background-color: red;
+    border: 1px solid black;
+    padding: 100px;
+    padding-right: 300px;
+}
+
+#terceira {
+    height: 100px;
+    background-color: green;
+}
+
+p {
+    margin: 0;
+}
+

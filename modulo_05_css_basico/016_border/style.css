@@ -1,0 +1,32 @@
+div {
+    height: 100px;
+    width: 100px;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+#primeira {
+    height: 100px;
+    background-color: aqua;
+}
+
+#segunda {
+    height: 100px;
+    width: 100px;
+    border-width: 5px;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 50%;
+    background-color: red;
+}
+
+#terceira {
+    height: 100px;
+    border-color: chartreuse;
+    background-color: purple;
+}
+
+p {
+    border: 2px solid green;
+}
