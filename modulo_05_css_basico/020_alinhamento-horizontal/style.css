@@ -1,0 +1,15 @@
+div {
+    background-color: blue;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    width: 400px;
+    margin: 20px auto;
+}
+
+img {
+    background-color: red;
+}

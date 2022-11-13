@@ -1,0 +1,12 @@
+Overflow:
+
+
+* hidden;  => esconde a parte que está ultrapassando o tamanho do elemento pai.
+
+* visible: => padrão, vaza o elemento pai se o elemento filho for maior.
+
+* scroll: => o conteúdo não vaza o elemento pai e aparece uma barra de rolagem na direita e em baixo caso o elemento esteja transbordando nas laterais tbm, se não quiser a barra de rolagem em baixo é só colocar overflow auto que ele entennde automaticamente qual scroll está vazando e colocar apenas uma barra de rolagem. 
+
+
+*overflow-y: coloca a barra de rolagem apenas no eixo y;
+

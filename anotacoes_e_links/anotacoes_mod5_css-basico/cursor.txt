@@ -1,0 +1,9 @@
+Como colocar uma imagem no seu cursor no ligar dos ponteiros padrão:
+Obs: é preciso colocar um default(outro cursor no caso de o navegador não conseguir carregar aquela imagem)
+
+ul li {
+	cursor: url('./imagens/logo-16.png'), pointer;
+}
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/cursor  - lista com todos os cursores utilizaveis

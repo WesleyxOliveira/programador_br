@@ -1,0 +1,16 @@
+* Como colocar uma imagem no lugar dos marcadores de uma lista:
+Obs: Não é possível alterar o tamanho da imagem do list-style-type pelo css, por isso é preciso que vc carregue a imagem já no tamanho que vc correto. tamanho sugerido (16px X 16px) se o tamanho da font da lista for 16px, se não coloque a imagem do tamanho da fonte.
+
+
+ul {
+    list-style-image: url("./imagens/logo.png");
+}
+
+
+
+* como colocar o marcador dentro da msm caixa do item.
+Obs: o padrão do list-style-position outside;
+
+li {
+    list-style-position: inside;
+}

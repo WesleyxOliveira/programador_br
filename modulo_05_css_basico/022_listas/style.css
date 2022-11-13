@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+ul {
+    border: 1px solid;
+}
+
+li {
+    background-color: rgb(255, 192, 3);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+ol {
+    list-style-type: upper-alpha;
+    background-color: #09c;
+    padding: 30px;
+}
