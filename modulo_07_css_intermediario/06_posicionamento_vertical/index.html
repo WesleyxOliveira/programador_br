@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Posicionamento vertical</title>
+    <style>
+        body {
+            font-size: 1.2rem;
+        }
+
+        .card {
+            position: relative;
+            text-align: center;
+            float: left;
+            width: 400px;
+            height: 200px;
+            border: 2px solid green;
+        }
+
+        .c1 {
+            background-color: red;
+            line-height: 200px;
+        }
+
+        .c2 {
+            position: absolute;
+            color: white;
+            top: 50%;
+
+            transform: translate(-50%);
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="c1">
+            Wesley Olveira
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="c2">
+            Wesley Olveira
+        </div>
+    </div>
+</body>
+</html>

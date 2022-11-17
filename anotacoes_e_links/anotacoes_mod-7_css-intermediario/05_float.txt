@@ -1,0 +1,14 @@
+Float: left;
+
+* O float é uma propriedade que permite que um elemento fique flutuando ao lado de outro.
+
+
+* clear: letf; clear: right;
+
+Faz com que não tenha nenhum tipo de outro elemento flutuando em nenhum dos lados ou em apenas um dos lados.
+
+* clear: both;
+ 
+Faz com que não fique nenhum elemento flutuando nem do lado direito nem do esquerdo.
+
+* O padrão do clear é o none que permite que se tenha elementos flutuando tanto do seu lado direito quanto do esquerdo;

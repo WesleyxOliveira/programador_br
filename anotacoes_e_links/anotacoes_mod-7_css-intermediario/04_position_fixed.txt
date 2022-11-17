@@ -1,0 +1,5 @@
+Position: Fixed;
+
+Quando coloco o valor da propriedade position de um elemento como fixed, esse elemento se posicionará em relação a viewport.
+
+Não segue o fluxo da página, ou seja, fica fixo na tela.
