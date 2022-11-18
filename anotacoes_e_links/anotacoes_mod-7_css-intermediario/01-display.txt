@@ -1,9 +1,40 @@
 Display: 
 
+* display: none;
+
+O display none, é como se o elemento nunca tivesse sido colocado na tela(não é mostrado).
+
+temos tbm a propriedade visibility que não faz parte do display mas que tem um comportamento parecido. Por exemplo, seu eu colocar visibility: hidden; em um elemento, ele ocupará o espaço na tela destinado a ele, mas será escondido, não será mostrado. 
+
+
+
+* display: inline;
+
+Um elemento inline ocupa somente a largura e altura necessárias, podem ser inseridas no meio de um parágrafo que não vai quebar a linha, e não da para definir altura e largura como em um elemento do tipo block.
+
+
+
+* display: block;
+
+Um elemento do tipo block, ocupa toda a largura possível e o próximo elemento começa na linha de baixo.
+
+Em um elemento de bloco eu consigo definir altura e largura, já no inline não é possível.
+
+
+
+
+* display: inline-block;
+
+O elemento do tipo inline-block vai manter o comportamento de um elemento inline, ou seja, não vai quebrar uma linha, mas vai permitir que eu altere a largura e a altura. 
+
+
+
+
+
 Obs: Nunca devemos utilizar um elemento do tipo block dentro de um parágrafo (div ou outro parágrafo) pois isso acaba quebrando o fluxo do parágrafo. Ex:
 
    <p>
-        Aqui eu tenho o início de um parágrafo <div> uma div no meio</div> E o fim do parágrafo.
+        Aqui eu tenho o início de um parágrafo <div> uma div no meio</div> E o 	fim do parágrafo.
    </p>
 
 * O restante da frase acaba ficando fora do parágrafo pois o fluxo do parágrafo foi quebrado.

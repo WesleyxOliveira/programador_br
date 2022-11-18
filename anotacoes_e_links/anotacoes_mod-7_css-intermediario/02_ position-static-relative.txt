@@ -1,17 +1,41 @@
 Position static e relative
 
-* static - todo elemento se encaixa embaixo do outro elemento de se for display block ou ao lado do outro elemento se for inline-block ( Padrão);
+* Static
 
-* relative - relativo ao static, ou seja, relativo ao posicionamento padrão. Por exemplo.
+O posicionamento static é o padrão, faz com que todo elemento fique em baixo um do outro se for do tipo block ou do lado um do outro se for do tipo inline ou inline-block;
 
-position: relative;
-left: 20px;
 
-Essa configuração vai dar um espaçamento para a esqueda de 20px em relação ao posicionamento padrão. Isso serve para todos os lados do elemento.
 
-A diferença entre o position e o margin é que o margin vai mecher no posicionamento de outros elementos. Por exemplo, se eu der um margin-top de 20px o elemento de baixo tbm vai se mover, já com o position top 20px; apenas o elemento onde está sendo aplicada essa configuração será movido.
+* Relative
 
-A posição relativa não altera a posição de nenhum outro elemento, apenas do elemento onde está sendo aplicada a posição relativa.
+O posicionamento relativo, vai ser relativo ao static, ou seja, relativo ao posicionamento padrão. Quando utilizamos o posicionamento relativo, podemos usar algumas propriedades como, left, right, top e bottom.
+
+Ex:
+
+left: 20px; => vai dar um espaçamento a esquerda de 20px em relação a sua posição original;
+
+top: 40px; => vai dar um espaçamento em cima de 40px em relação a sua posição original; 
+
+
+OBS: A diferença entre colocar um left: 20px; e um margin-left: 20px; é que usando o position left eu movo apenas o elemento onde está sendo aplicado a propriedade, com o margin-left o elemento tbm pode alterar a posição dos elemetons que estão ao seu redor baseados na posição do elemento em questão.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 Positon: Abosolute
 
-Quando coloco o valor da propriedade position como absolute, os outro elementos não serão mais posicionados em referência aquele elemento que está como posicionamento absoluto e o posicionamento do elemento que está com a propriedade absolute será em relação ao primeiro elemento ascendente ( pai, avô etc) que ele encontrar que não seja position static.
+Quando coloco o valor da propriedade position como absolute, os outro elementos não serão mais posicionados em referência aquele elemento que está como posicionamento absoluto e o posicionamento do elemento que está com a propriedade absolute será em relação ao primeiro elemento ascendente ( pai, avô etc) que ele encontrar que não seja position static, e não mais ao posicionamento inicial.
 
 (obs:) O pai não precisa ser relative, só não pode ser static para que o elemento que esteja com a proprieade absolute se posicione em relação a ele. (usar relative).
