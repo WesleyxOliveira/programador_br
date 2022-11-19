@@ -1,0 +1,3 @@
+Media Query
+
+As media queries servem para dar um comportamento diferente para o css de algum elemento, dependendo do tamanho da tela(computador, tablet, celular etc).
