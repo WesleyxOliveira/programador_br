@@ -18,32 +18,46 @@
             height: 200px;
             border: 2px solid green;
         }
+        
+        .card2 {
+            float: left;
+            clear: left;
+            padding: 100px 150px;
+            border: 1px solid green;
+        }
 
         .c1 {
-            background-color: red;
+            height: 100%;
             line-height: 200px;
         }
 
         .c2 {
             position: absolute;
-            color: white;
             top: 50%;
-
-            transform: translate(-50%);
-            background-color: blue;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
+    <!--Centralizado com line-height-->
     <div class="card">
         <div class="c1">
-            Wesley Olveira
+            Wesley Oliveira
         </div>
     </div>
 
+    <!--Centralizado com transition: translate()-->
     <div class="card">
         <div class="c2">
-            Wesley Olveira
+            Wesley Oliveira
+        </div>
+    </div>
+
+    <!--Centralizado com padding-->
+    <div class="card2">
+        <div style="background-color: red;">
+            Igor Oliveira
         </div>
     </div>
 </body>

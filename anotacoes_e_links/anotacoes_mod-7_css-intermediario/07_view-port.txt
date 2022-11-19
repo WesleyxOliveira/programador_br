@@ -1,0 +1,7 @@
+meta tag viewport
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Essa meta tag indica que o conteúdo tem que ter o memso tamanho do device(dispositivo);
+
+Seve para deixa a página responsiva;

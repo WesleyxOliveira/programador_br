@@ -1,0 +1,9 @@
+
+
+Definição w3schools:
+
+Um elemento com position: sticky;é posicionado com base na posição de rolagem do usuário.
+
+Um elemento fixo alterna entre relativee fixed, dependendo da posição de rolagem. Ele é posicionado relativo até que uma determinada posição de deslocamento seja encontrada na viewport - então ele "gruda" no lugar (como position:fixed).
+
+Nota: Internet Explorer, Edge 15 e versões anteriores não suportam posicionamento fixo. O Safari requer um prefixo -webkit- (veja o exemplo abaixo). Você também deve especificar pelo menos um de , topou para que o posicionamento fixo funcione.rightbottomleft

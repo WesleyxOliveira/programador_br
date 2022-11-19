@@ -21,6 +21,14 @@ OBS: A diferença entre colocar um left: 20px; e um margin-left: 20px; é que us
 
 
 
+definição w3schols
+
+Um elemento com position: relative;é posicionado em relação à sua posição normal.
+
+Definir as propriedades superior, direita, inferior e esquerda de um elemento relativamente posicionado fará com que ele seja ajustado para longe de sua posição normal. Outros conteúdos não serão ajustados para caber em qualquer lacuna deixada pelo elemento.
+
+
+
 
 
 
