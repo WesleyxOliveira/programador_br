@@ -1,0 +1,10 @@
+Formulários
+
+* Os formulários são muito importantes nas páginas da internete para se capturar emails ou ter um campo de contato com o dono da página entre outras coisas.
+
+* É a conexão entre o frontEnd e o BackEnd;
+
+
+* Propriedade action=""
+
+Endereço para onde será enviado os dados do formulário.
