@@ -1,1 +1,5 @@
 https://www.w3schools.com/cssref/index.php - links com lista de propriedades css passado na aula 2 do módulo 5.
+
+
+
+https://caniuse.com/  - site para saber em qual navegador determinada funcionalidade do html5 funciona.
