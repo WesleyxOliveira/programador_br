@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 * {
    margin: 0; 
    padding: 0;
@@ -73,4 +74,44 @@ select {
     /* background-position-x: calc(100% - 10px);
     background-position-y: center; */
     background-position: calc(100% - 10px) center;
+}
+
+footer {
+    background-color: #202121;
+    padding: 40px;
+    text-align: center;
+}
+
+.picture {
+    width: 160px;
+    text-align: center;
+}
+
+.description {
+    text-align: left;
+    color: #fff;
+    display: inline-block;
+    max-width: 40%;
+    margin-left: 40px;
+}
+
+.description p, .description h3 {
+    margin-bottom: 20px;
+}
+
+.description h3 {
+    font-size: 24px;
+}
+
+
+/* Media Query para telas menores que 500px */
+@media screen and (max-width: 500px) {
+
+    .formContainer {
+        max-width: 90%;
+        float: none;
+        margin: auto;
+    }
+
+    
 }
