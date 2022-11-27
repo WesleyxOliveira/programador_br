@@ -61,6 +61,11 @@ input[type="submit"] {
     color: #fff;
     background-color: #48c5ce;
     font-weight: bold;
+    transition: .4s;
+}
+
+input[type="submit"]:hover {
+    background-color: #3dabb3;
 }
 
 /* mudando a aparência padrão do select */
