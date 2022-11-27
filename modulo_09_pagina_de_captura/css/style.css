@@ -113,5 +113,15 @@ footer {
         margin: auto;
     }
 
+    .picture {
+        width: 80%;
+    }
+
+    .description {
+        display: block;
+        margin: 10px auto;
+        max-width: 80%;
+    }
+
     
 }
