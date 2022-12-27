@@ -1,0 +1,13 @@
+Exemplo de um algoritmo para passar manteiga no pão
+
+1 -Se o queijo estiver fechado, então abrir o queijo.
+Fim
+
+2 - Pegar a faca
+3 - Cortar um pedaço do queijo com a faca.
+4 - Abrir o pão com a faca.
+5 - Passar o queijo no pão com a faca.
+6 - Largar a faca e comer o pão.
+
+
+Ou seja, algoritmo são passos finitos em uma ordem predefinida que podem resolver determinados problemas.
