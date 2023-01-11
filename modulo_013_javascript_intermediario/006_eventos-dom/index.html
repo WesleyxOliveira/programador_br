@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>006 - Eventos Dom</title>
+    <style>
+        div {
+            display: inline-block;
+            padding: 20px;
+            font-size: 2rem;
+            color: #fff;
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        function changeH1(input) {
+            let h1 = document.getElementsByTagName("h1")[0];
+
+            h1.innerText = input.value;
+        }
+
+        function hideH1() {
+            let h1 = document.getElementsByTagName("h1")[0];
+
+            if(h1.style.display = "inline-block") {
+                h1.style.display = "none";
+            } else if(h1.style.display == "none") {
+                h1.style.display = "inline-block";
+            }
+        }
+    </script>
+</head>
+<body>    
+    <h1 onclick="this.style.color = 'red'">Clique em mim</h1>
+
+    <!-- <input oninput="changeH1(this)" type="text">     -->
+
+    <div onclick="hideH1()">Click</div>
+</body>
+</html>
