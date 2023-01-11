@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>008 - Eventos 3</title>
+    <script src="script.js" defer></script>
+    <script>
+
+        function clicou(e) {
+            this.style.color = "red";
+            this.innerText = "Wesley".toUpperCase();
+        }
+
+        function mouseIn() {
+            this.innerHTML = "Mouse sobre o elemento";
+        }
+
+        function carregou() {
+            var titulo = document.querySelector("#titulo");
+
+            titulo.innerHTML = "Xzera";
+            // titulo.setAttribute("onclick", "clicou(this)");
+
+            titulo.addEventListener("click", clicou);
+            titulo.addEventListener("mouseover", mouseIn);
+            titulo.addEventListener("mouseleave", mousout);
+
+            titulo.setAttribute("id", "titulo-1");
+
+            console.log(titulo);
+        }
+
+    </script>
+</head>
+<body onload="carregou()">
+    <h1 id="titulo">Título</h1>
+
+</body>
+</html>
