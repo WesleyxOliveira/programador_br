@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>012 - Elementos pai e filho</title>
+    <script>
+        window.onload = function() {
+            // let d1 = document.getElementById("d1");
+
+            // let h1 = d1.children[0];
+
+            // console.log(h1);
+            // console.log(h1.parentElement);
+
+            let h1 = document.getElementsByTagName("h1");
+
+            for(let h of h1) {
+
+                h.addEventListener("click", qop);
+            }
+
+            function qop(e) { 
+                let t = e.target; // Pega qual elemento foi clicado
+
+                console.log(t.parentElement); // Me mostra qual o pai do elemento clicado
+                
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <h1>Título</h1>
+        <p>Qualquer texto</p>
+    </div>
+    <div id="d2">
+        <h1>Título 2</h1>
+        <p>Qualquer texto 2</p>
+    </div>
+</body>
+</html>
