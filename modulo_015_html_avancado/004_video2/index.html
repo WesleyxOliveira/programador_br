@@ -6,42 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>004 Video controle parte 1</title>
-    <style>
-        .container {
-            position: relative;
-            width: 640px;
-            height: 360px;
-        }
-
-        .video {
-            width: 100%;
-        }
-
-        .controle {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            /* background-color: red; */
-            text-align: center;
-        }
-
-        .btn {
-            position: relative;
-            top: 100%;
-            width: 60px;
-            padding: 10px;
-            cursor: pointer;
-            transform: translateY(-100%);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <div class="container">
 
-        <video id="video1" class="video" src="./assets/videos/pexels-video.mp4"></video>
+        <video id="video1" class="video" src="./assets/videos/Rema, Selena Gomez - Calm Down (Official Music Video) VDownloader.mp4" poster="./assets/imagens/poster.jpg"></video>
 
         <div class="controle">
             <img class="btn" onclick="retroceder()" src="./assets/imagens/rewind.png" alt="back button">
@@ -49,12 +20,12 @@
             <img class="btn" onclick="diminuir_vel()" src="./assets/imagens/minus.png" alt="diminuir velo">
             <img class="btn" onclick="aumentar_vel()" src="./assets/imagens/add.png" alt="aumentar velo">
             <img class="btn" onclick="play()" src="./assets/imagens/play.png" alt="play button">
-            <img class="btn" onclick="stop()" src="./assets/imagens/pause.png" alt="pause button">
+            <img class="btn" onclick="pause()" src="./assets/imagens/pause.png" alt="Pause">
+            <img class="btn" onclick="parar()" src="./assets/imagens/stop.png" alt="stop button">
         </div>
     </div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
