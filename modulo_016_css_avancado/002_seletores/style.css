@@ -1,0 +1,78 @@
+/* 1
+*: Seleciona todos os elementos da página
+
+* {
+    background-color: red;
+}
+
+*/
+
+/* 2
+ , : A vírgula me deixa selecionar mais elementos e aplicar o memso estilo para todos
+
+h1, p, header {
+    color: red;
+}
+
+*/
+
+/*  3
+div p: Dessa forma eu seleciono todos os parágrafos que estiverem dentro da div.
+
+div p {
+    color: red;
+}
+
+*/
+
+
+/*  4
+section > p: Pega todos os parágrafos, cujo pai seja o header.
+
+header> p {
+    background-color: green;
+}
+
+*/
+
+
+
+/* 5 
+Pega o elemento nesse caso do exemplo <p> que estiver imediatament após o header, se existir um outro elemento antes do p, ele não selecionará nada, pois é preciso estar imediatamente após o elemento de referência.
+
+header + p {
+    background-color: blue;
+}
+
+*/
+
+
+
+/* 6
+Nesse caso o seletor vai pegar todos os parágrafos que estiverem depois do elemento de referência, que neste caso é o header.
+
+header ~ p {
+    background-color: red;
+}
+
+*/
+
+
+/* 7 
+Todo elemento que tenha o atributo width será selecionado.
+
+[width] {
+    background-color: red;
+}
+
+*/
+
+/* Todo elemento que tenha o atributo width = 500 será selecionado.
+
+[width="500"] {
+    background-color: blue;
+}
+
+*;
+
+title[titulo="titulo 2"]
