@@ -1,78 +1,153 @@
-/* 1
-*: Seleciona todos os elementos da página
+/*
+
+Seletor Global (*)
+
+Seleciona todos os elementos da página
 
 * {
-    background-color: red;
+    background-color: green;
+    margin: 0;
 }
 
 */
 
-/* 2
- , : A vírgula me deixa selecionar mais elementos e aplicar o memso estilo para todos
+/*-----------------------------------------*/
 
-h1, p, header {
-    color: red;
+/* Vírgula (, )
+
+Com a vírgula, posso selecionar mais de um elemento e aplicar o msm estilo a todos eles.Ex:
+
+div, p {
+    background-color: green;
 }
 
-*/
+Posso fazer isso usando tbm classes e ID´s. Ex:
 
-/*  3
-div p: Dessa forma eu seleciono todos os parágrafos que estiverem dentro da div.
-
-div p {
-    color: red;
-}
-
-*/
-
-
-/*  4
-section > p: Pega todos os parágrafos, cujo pai seja o header.
-
-header> p {
+div, .paragrafo2 {
     background-color: green;
 }
 
 */
 
+/*-----------------------------------------*/
 
+/* Maior que (>)
 
-/* 5 
-Pega o elemento nesse caso do exemplo <p> que estiver imediatament após o header, se existir um outro elemento antes do p, ele não selecionará nada, pois é preciso estar imediatamente após o elemento de referência.
+Pega todos os elementos cujo pai seja o elemento de referência. Ex: 
 
-header + p {
-    background-color: blue;
+header > p {
+    color: green;
+    font: bold normal 2em Arial;
 }
 
 */
 
+/*-----------------------------------------*/
+
+/* Seletor (+)
+
+Pega o elemento que está logo após o elemento de referência (apenas o primeiro elemento). Ex:
 
 
-/* 6
-Nesse caso o seletor vai pegar todos os parágrafos que estiverem depois do elemento de referência, que neste caso é o header.
+div + p, header + p {
+    background-color: red;
+}
+
+
+*/
+
+/*-----------------------------------------*/
+
+
+/* Seletor (~)
+
+Pega todos os elementos que vem depois do elemento de referência
+
 
 header ~ p {
-    background-color: red;
+    font: bolder normal 1em Arial;
+    color: green;
 }
 
-*/
 
+*/ 
 
-/* 7 
-Todo elemento que tenha o atributo width será selecionado.
+/*-----------------------------------------*/
+
+/* Seletor [width]
+
+Seleciona todos os elementos quem tem o atributo [width]
+
 
 [width] {
-    background-color: red;
+    background-color: lightcoral;
+}
+
+
+*/
+
+/*-----------------------------------------*/
+
+/* Seletor [width="500"]
+
+Seleciona todos os elementos que tenham o atributo [width="500"];
+
+
+
+[width="300"] {
+    background-color: purple;
+    color: #fff;
 }
 
 */
 
-/* Todo elemento que tenha o atributo width = 500 será selecionado.
+/*-----------------------------------------*/
 
-[width="500"] {
-    background-color: blue;
+/* Seletor [title~= "titulo"]
+
+Pega todos os titulos que tenham a palavra titulo
+
+
+[title ~= "titulo"] {
+    color: purple;
 }
 
-*;
 
-title[titulo="titulo 2"]
+*/
+
+/*-----------------------------------------*/
+
+/* Seletor [title^= "t"]
+
+pega todos os titulos que começam com a letra "t"
+
+[title^= "t"] {
+    background-color: aqua;
+}
+
+
+*/
+
+/*-----------------------------------------*/
+
+/* Seletor [title$= "1"] 
+
+Pega todos os elementos que tenham um título que terminem com "1";
+
+[title$= "1"] {
+    background-color: aquamarine;
+}
+
+*/
+
+/*-----------------------------------------*/
+
+/* [title*= "tu"]
+
+Pega todos os titulos que contenham a palavra "tu". Ex: titulo
+
+[title*= "tu"] {
+    background-color: pink;
+}
+
+*/
