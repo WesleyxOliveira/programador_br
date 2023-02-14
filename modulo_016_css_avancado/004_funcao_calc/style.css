@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: red;
+}
+
+.container {
+    width: 100%;
+    background-color: blue;
+}
+
+.primeira {
+    display: inline-block;
+    width: calc(100% - 300px);
+    height: 300px;
+    background-color: yellow;
+    margin-right: -4px;
+    margin-bottom: -4px;
+}
+
+.segunda {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    margin-bottom: -4px;
+}

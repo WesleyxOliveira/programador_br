@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body {
+    background-color: red;
+    margin: 0;
+    padding: 0;
+}
+
+/* Isso mantém sempre a mesma distância de 30px de cada lado apra o inicio e fim do body. */
+.container {
+    width: calc(100% - 60px);
+    height: 100px;
+    background-color: blue;
+    margin: auto;
+}

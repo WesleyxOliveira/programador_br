@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/* :focus
+
+Muda a cor das letras da input quando a input está em foco. Ex:
+
+input:focus {
+    color: red;
+}
+
+*/
+
+/*############################################*/
+
+/*
+
+/* :first-child
+
+Muda apenas o primeiro filho de algum elemento, mas o elemento filho tem que ser o primeiro elemento. Ex:
+
+li:first-child {
+    color: red;
+}
+
+*/
+
+/*############################################*/
+
+/* :first-of-type
+
+Mudo o primeiro elemento do tipo especificado, no caso do exemplo abaixo (li), independente se existem outros filhos de tipos diferentes antes dele. Ex:
+
+li:first-of-type {
+    color: red;
+}
+
+*/
+
+/*############################################*/
+
+/* :nth-child(2)
+
+Pega o segundo filho de qualquer elemento. Ex:
+
+li:nth-child(2) {
+    color: red;
+}
+
+*/
+
+/*############################################*/
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+li:nth-of-type(odd) {
+    background-color: gray;
+    color: #fff;
+}
+
+li:nth-child(even) {
+    background-color: lightskyblue;
+}
