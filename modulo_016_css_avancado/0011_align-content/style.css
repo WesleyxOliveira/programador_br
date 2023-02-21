@@ -3,9 +3,9 @@
 .container {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap-reverse; */
+    flex-wrap: wrap;
+    /* align-items: flex-end; */
+    align-content: flex-stretch;
 
     background-color: darkgray;
     height: 400px;
@@ -25,6 +25,6 @@
 }
 
 .rect {
-    width: 150px;
+    width: 200px;
     height: 100px;
 }
