@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.container {
+    color: white;
+    display: grid;
+    padding: 10px;
+    background-color: lightgray;
+
+    grid-template: 100px 100px / 1fr 2fr 1fr;
+
+    /* grid-row-gap: 10px;
+    grid-column-gap: 10px; */
+    grid-gap: 10px;
+}
+
+.r1 {
+    background-color: red;
+}
+
+.r2 {
+    background-color: blue;
+}
+
+.r3 {
+    background-color: green;
+}
