@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.btn {
+    display: inline-block;
+    padding: 20px;
+    background-color: #428bca;
+    color: #fff;
+    font-size: 30px;
+
+    transition-property: background-color, padding;
+    /* transition-duration: 500ms, 1s;
+    transition-delay: 100ms;
+    transition-timing-function: ease-in-out; */
+
+    transition: background-color 500ms 1s, padding 1s ease-in-out; /* Short hande */
+}
+
+.btn:hover {
+    background-color: #2248ca;
+    padding-left: 30px;
+    padding-right: 30px ;
+}
