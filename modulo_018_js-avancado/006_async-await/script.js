@@ -14,7 +14,7 @@ function inserirUsuario(nome) {
             }else {
                 reject({msg: "Mensagem de erro de qualquer coisa"});
             }
-        }, 1000);
+        }, 2000);
     });
 
     return promise;
@@ -24,10 +24,9 @@ function listarUsuarios() {
     console.log(usuarios);
 }
 
-function executar() {
-    inserirUsuario("Wesley");
+async function executar() {
+    await inserirUsuario("Wesley");
     listarUsuarios();
 }
 
 executar();
-
