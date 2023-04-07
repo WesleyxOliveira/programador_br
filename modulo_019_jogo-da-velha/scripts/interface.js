@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     squares.forEach((square) => {
         square.addEventListener('click', handleClick)
     })
-
 });
 
 function handleClick(event) {
@@ -23,5 +22,9 @@ function updateSquares() {
     squares.forEach((square) => {
         let position = square.id;
         let symbol = board[position];
+
+        if(symbol != '') {
+            square.innerHTML = `<div class='${symbol}'><div>`
+        }
     })
 }   
