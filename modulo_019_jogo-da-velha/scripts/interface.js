@@ -12,19 +12,29 @@ function handleClick(event) {
     let square = event.target;
     let position = square.id;
 
-    handleMove(position);
-    updateSquares();    
+    if( handleMove(position)) {
+        setTimeout(() => {
+            alert("O jogo acabou! - O vencedor foi: " + playerTime);
+        }, 10);
+    }
+    updateSquare(position);    
 }
 
-function updateSquares() {
-    let squares = document.querySelectorAll(".square");
+function updateSquare(position) {
+    let square = document.getElementById(position.toString());
+    let symbol = board[position];
+    square.innerHTML = `<div class='${symbol}'></div>`
+}
 
-    squares.forEach((square) => {
-        let position = square.id;
-        let symbol = board[position];
+// function updateSquares() {
+//     let squares = document.querySelectorAll(".square");
 
-        if(symbol != '') {
-            square.innerHTML = `<div class='${symbol}'><div>`
-        }
-    })
-}   
+//     squares.forEach((square) => {
+//         let position = square.id;
+//         let symbol = board[position];
+
+//         if(symbol != '') {
+//             square.innerHTML = `<div class='${symbol}'><div>`
+//         }
+//     })
+// }   
