@@ -28,16 +28,16 @@ function login() {
     let userPassword = '123abc';
 
     auth.setPersistence(firebase.auth.Auth.Persistence.NONE)
-    .then(() => {
-        auth.signInWithEmailAndPassword(userMail, userPassword).then(loggedUser => {
-            // console.log(auth.currentUser);
+        .then(() => {
+            auth.signInWithEmailAndPassword(userMail, userPassword).then(loggedUser => {
+                // console.log(auth.currentUser);
+            })
+                .catch(error => {
+                    console.log(error);
+                });
+        }).catch(error => {
+            console.log(error);
         })
-            .catch(error => {
-                console.log(error);
-            });
-    }).catch(error => {
-        console.log(error);
-    })
 }
 
 auth.onAuthStateChanged((user) => {
