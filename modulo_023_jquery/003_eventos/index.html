@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003 - eventos</title>
+</head>
+<body>
+    <h1 class="titulo">Este é um títulos h1</h1>
+
+    <h1 id="sair" style="display: none; color: red;">Não saia agora!</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).mouseleave(() => {
+            $('#sair').show();
+        })
+
+        $(document).mouseenter(() => {
+            $('#sair').hide();
+        })
+       
+    </script>
+</body>
+</html>

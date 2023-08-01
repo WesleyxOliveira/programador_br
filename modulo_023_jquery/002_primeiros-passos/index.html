@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>001 - integrando api do jquery</title>
+    <title>002 - Primeiros passos</title>
 </head>
-
 <body>
-    <h1 class="titulo">Esse é um título</h1>
+    <h1 class="titulo">Este é um títulos h1</h1>
 
     <h1>Outro título</h1>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script>
-        setTimeout(() => {
-            $('.titulo').hide();
-        }, 2000);
+        // // let jq = $.noConflict();
+
+        // // jq('.titulo').hide();
+
+        // document.querySelectorAll('h1').forEach((title) => {
+        //     setTimeout(() => {
+        //         title.style.color = 'red';
+        //     }, 2000);
+        // })
+
+        $('h1').hide();
+
+       
     </script>
 </body>
-
 </html>
