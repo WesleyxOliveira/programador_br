@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004 - animações</title>
+    <style>
+        #square {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            display: none;
+            position: absolute;
+        }
+
+        #green {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button>slideDown</button>
+    <button id="stop">Stop</button>
+
+    <div id="green"></div>
+    <div id="square"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $('button').click((e) => {
+            $('#green').animate({height: 500, width: 500}, 3000);
+        })
+        $('#stop').click(() => {
+            $('#green').stop();
+        })
+    </script>
+</body>
+
+</html>
