@@ -1,0 +1,1 @@
+console.log($('#lista1').find('.item2').text('novo item'));
