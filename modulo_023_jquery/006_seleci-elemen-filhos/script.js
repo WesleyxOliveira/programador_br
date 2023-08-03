@@ -1,3 +1,5 @@
-let lista1 = $('#lista1');
+let body = $('body');
 
-lista1.find('.item2').hide();
+
+
+console.log(body.children('#lista1'));
