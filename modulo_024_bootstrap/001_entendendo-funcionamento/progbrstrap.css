@@ -1,0 +1,27 @@
+.botao {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.fundo-tipo1 {
+    background-color: #08d;
+}
+
+.fundo-tipo2 {
+    background-color: tomato;
+}
+
+.botao-tipo1 {
+    background-color: #05d;
+    color: white;
+}
+
+.botao-tipo1:hover {
+    background-color: #08d;
+}
+
+.texto-claro {
+    color: white;
+}
