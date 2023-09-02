@@ -1,30 +1,44 @@
 function createNewRide() {
-    const rideId = new Date().getTime();
+    const rideId = Date.now();
     const rideRecord = {
-        data: [],
+        data:[],
         startTime: rideId,
         stopTime: null
-    };
+    }
     localStorage.setItem(rideId.toString(), JSON.stringify(rideRecord));
     return rideId;
 }
 
+// function getRideRecord(rideId) {
+//     return JSON.parse(localStorage.getItem(rideId));
+// }
+
 function getRideRecord(rideId) {
-    const rideRecordStr = localStorage.getItem(rideId);
-    if (rideRecordStr) {
-        return JSON.parse(rideRecordStr);
+    const rideData = localStorage.getItem(rideId);
+    if (rideData === null) {
+        // Tratar o caso em que não há nenhum dado armazenado com a chave rideId
+        return null; // ou lançar uma exceção, dependendo da lógica desejada
     }
-    return null; // Retorna null se o registro não existir
+    return JSON.parse(rideData);
+}
+
+function saveRideRecord(rideId, rideRecord) {
+    localStorage.setItem(rideId, JSON.stringify(rideRecord));
 }
 
 function addPosition(rideId, position) {
     const rideRecord = getRideRecord(rideId);
-    if (rideRecord) {
-        // Faça o que precisa ser feito com o registro
-        rideRecord.data.push(position);
-        // Atualize o registro no Local Storage
-        localStorage.setItem(rideId.toString(), JSON.stringify(rideRecord));
-    } else {
-        console.error('Registro não encontrado.'); // Tratamento para registro inexistente
+
+    const newData = {
+        accuracy: position.coords.accuracy,
+        altitude: position.coords.altitude,
+        altitudeAccuracy: position.coords.altitudeAccuracy,
+        heading: position.coords.heading,
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+        speed: position.coords.speed,
+        timestamp: position.timestamp
     }
+    rideRecord.data.push(newData);
+    saveRideRecord(rideId, rideRecord)
 }

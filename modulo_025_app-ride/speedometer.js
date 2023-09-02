@@ -10,8 +10,8 @@ startBtn.addEventListener('click', () => {
         return;
 
     function handleSuccess(position) {
-        console.log(position);
         addPosition(currentRide, position);
+        console.log(position);
         speedElement.innerText = position.coords.speed ? (position.coords.speed * 3.6).toFixed(1) : 0;
     }
 
@@ -33,7 +33,12 @@ stopBtn.addEventListener('click', () => {
         return;
     navigator.geolocation.clearWatch(watchId);
     watchId = null;
+    updateStopTime();
     stopBtn.classList.add('d-none');
     startBtn.classList.remove('d-none');
+});
 
-})
+function updateStopTime(rideId) {
+    const rideRecord = getRideRecord(rideId);
+    rideRecord.stopTime = Date.now();
+}
