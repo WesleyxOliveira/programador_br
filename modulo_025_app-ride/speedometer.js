@@ -6,39 +6,40 @@ let watchId = null;
 let currentRide = null;
 
 startBtn.addEventListener('click', () => {
-    if(watchId)
+    if (watchId)
         return;
 
     function handleSuccess(position) {
+        // console.log(position.coords)
         addPosition(currentRide, position);
-        console.log(position);
-        speedElement.innerText = position.coords.speed ? (position.coords.speed * 3.6).toFixed(1) : 0;
+
+        speedElement.innerText = position.coords.speed ? (position.coords.speed * 3.6).toFixed(1) : '0';
     }
 
     function handleError(error) {
-        console.log(error.msg);
+        console.log(error);
     }
 
-    const options = {enableHighAccuracy: true};
+    const options = { enableHighAccuracy: true }
+
     currentRide = createNewRide();
+
     watchId = navigator.geolocation.watchPosition(handleSuccess, handleError, options);
 
     startBtn.classList.add('d-none');
     stopBtn.classList.remove('d-none');
-});
+})
 
 stopBtn.addEventListener('click', () => {
-
-    if(!watchId)
+    if (!watchId)
         return;
+
     navigator.geolocation.clearWatch(watchId);
     watchId = null;
-    updateStopTime();
-    stopBtn.classList.add('d-none');
-    startBtn.classList.remove('d-none');
-});
+    
+    updateStopTime(currentRide);
+    currentRide = null;
 
-function updateStopTime(rideId) {
-    const rideRecord = getRideRecord(rideId);
-    rideRecord.stopTime = Date.now();
-}
+    startBtn.classList.remove('d-none');
+    stopBtn.classList.add('d-none');
+})

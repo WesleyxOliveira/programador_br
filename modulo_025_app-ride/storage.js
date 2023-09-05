@@ -1,25 +1,17 @@
 function createNewRide() {
     const rideId = Date.now();
     const rideRecord = {
-        data:[],
+        data: [],
         startTime: rideId,
         stopTime: null
     }
-    localStorage.setItem(rideId.toString(), JSON.stringify(rideRecord));
+
+    saveRideRecord(rideId, rideRecord);
     return rideId;
 }
 
-// function getRideRecord(rideId) {
-//     return JSON.parse(localStorage.getItem(rideId));
-// }
-
 function getRideRecord(rideId) {
-    const rideData = localStorage.getItem(rideId);
-    if (rideData === null) {
-        // Tratar o caso em que não há nenhum dado armazenado com a chave rideId
-        return null; // ou lançar uma exceção, dependendo da lógica desejada
-    }
-    return JSON.parse(rideData);
+    return JSON.parse(localStorage.getItem(rideId));
 }
 
 function saveRideRecord(rideId, rideRecord) {
@@ -28,7 +20,7 @@ function saveRideRecord(rideId, rideRecord) {
 
 function addPosition(rideId, position) {
     const rideRecord = getRideRecord(rideId);
-
+    // console.log(rideRecord);
     const newData = {
         accuracy: position.coords.accuracy,
         altitude: position.coords.altitude,
@@ -37,8 +29,15 @@ function addPosition(rideId, position) {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
         speed: position.coords.speed,
-        timestamp: position.timestamp
+        timeStamp: position.timeStamp
     }
     rideRecord.data.push(newData);
-    saveRideRecord(rideId, rideRecord)
+    saveRideRecord(rideId, rideRecord);
+}
+
+function updateStopTime(rideId) {
+    const rideRecord = getRideRecord(rideId);
+
+    rideRecord.stopTime = Date.now();
+    saveRideRecord(rideId, rideRecord);
 }
