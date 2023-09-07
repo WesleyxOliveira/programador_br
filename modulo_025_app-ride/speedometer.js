@@ -10,7 +10,6 @@ startBtn.addEventListener('click', () => {
         return;
 
     function handleSuccess(position) {
-        // console.log(position.coords)
         addPosition(currentRide, position);
 
         speedElement.innerText = position.coords.speed ? (position.coords.speed * 3.6).toFixed(1) : '0';
@@ -20,7 +19,7 @@ startBtn.addEventListener('click', () => {
         console.log(error);
     }
 
-    const options = { enableHighAccuracy: true }
+    const options = {enableHighAccuracy: true}
 
     currentRide = createNewRide();
 
