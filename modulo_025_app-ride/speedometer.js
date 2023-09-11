@@ -19,7 +19,7 @@ startBtn.addEventListener('click', () => {
         console.log(error);
     }
 
-    const options = {enableHighAccuracy: true}
+    const options = {enableHighAccuracy: true};
 
     currentRide = createNewRide();
 

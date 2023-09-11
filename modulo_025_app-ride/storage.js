@@ -24,7 +24,7 @@ function saveRideRecord(rideId, rideRecord) {
 
 function addPosition(rideId, position) {
     const rideRecord = getRideRecord(rideId);
-    // console.log(rideRecord);
+
     const newData = {
         accuracy: position.coords.accuracy,
         altitude: position.coords.altitude,
