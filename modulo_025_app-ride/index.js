@@ -18,10 +18,15 @@ allRides.forEach(async ([id, value]) => {
     cityDiv.innerText = `${firstLocationData.city} - ${firstLocationData.countryCode}`;
 
     const maxSpeedDiv = document.createElement('div');
-    maxSpeedDiv.innerText = getMaxSpeed(ride.data);
+    maxSpeedDiv.innerText = `Max speed: ${getMaxSpeed(ride.data)} Km/h`;
+
+    const distanceDiv = document.createElement('div');
+    distanceDiv.innerText = `Distance: ${getDistance(ride.data)} Km`;
 
     itemElement.appendChild(cityDiv);
     itemElement.appendChild(maxSpeedDiv);
+    itemElement.appendChild(distanceDiv);
+
     rideListElement.appendChild(itemElement);
 })
 
@@ -41,4 +46,31 @@ function getMaxSpeed(positions) {
     })
 
     return (maxSpeed * 3.6).toFixed(1);
+}
+
+function getDistance(position) {
+    const earthRadiusKm = 6371;
+    let totalDistance = 0;
+    for(let i = 0; i < position.length -1; i++) {
+        const p1 = {latitude:positions[i].latitude, longitude: position[i].longitude}
+        
+        const p2 = {latitude:positions[i + 1].latitude, longitude: position[i + 1].longitude}
+
+        const deltaLatitude = toRad(p2.latitude - p1.latitude);
+        const deltaLongitude = toRad(p2.longitude - p1.longitude);
+
+        const a = Math.sin(deltaLatitude/2) * Math.sin(deltaLatitude/2) + Math.sin(deltaLongitude/2) * Math.sin(deltaLongitude/2) * Math.cos(toRad(p1.latitude)) * Math.cos(toRad(p2.latitude))
+
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+        const distance = earthRadiusKm * c
+
+        totalDistance += distance;
+    }
+
+    function toRad(degree) {
+        return degree * Math.PI / 180
+    }
+
+    return totalDistance.toFixed(2);
 }
