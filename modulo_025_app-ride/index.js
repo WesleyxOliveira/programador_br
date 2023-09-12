@@ -4,9 +4,7 @@ const allRides = getAllRides();
 
 allRides.forEach(async ([id, value]) => {
     const ride = JSON.parse(value);
-    ride.id = id;
-
-    
+    ride.id = id;    
 
     const firstPosition = ride.data[0];
     const firstLocationData = await getLocationData(firstPosition.latitude, firstPosition.longitude);
@@ -23,9 +21,14 @@ allRides.forEach(async ([id, value]) => {
     const distanceDiv = document.createElement('div');
     distanceDiv.innerText = `Distance: ${getDistance(ride.data)} Km`;
 
+    const durationDiv = document.createElement('div');
+    durationDiv.innerText = getDuration(ride)
+    // console.log(ride);
+
     itemElement.appendChild(cityDiv);
     itemElement.appendChild(maxSpeedDiv);
     itemElement.appendChild(distanceDiv);
+    itemElement.appendChild(durationDiv);
 
     rideListElement.appendChild(itemElement);
 })
@@ -52,9 +55,9 @@ function getDistance(position) {
     const earthRadiusKm = 6371;
     let totalDistance = 0;
     for(let i = 0; i < position.length -1; i++) {
-        const p1 = {latitude:positions[i].latitude, longitude: position[i].longitude}
+        const p1 = {latitude:position[i].latitude, longitude: position[i].longitude}
         
-        const p2 = {latitude:positions[i + 1].latitude, longitude: position[i + 1].longitude}
+        const p2 = {latitude:position[i + 1].latitude, longitude: position[i + 1].longitude}
 
         const deltaLatitude = toRad(p2.latitude - p1.latitude);
         const deltaLongitude = toRad(p2.longitude - p1.longitude);
@@ -73,4 +76,17 @@ function getDistance(position) {
     }
 
     return totalDistance.toFixed(2);
+}
+
+function getDuration(ride) {
+    function format(number, digits) {
+        return String(number.toFixed(0).padStart(2, '0'));
+    }
+
+    const interval = (ride.stopTime - ride.startTime)/1000;
+
+    const minutes = Math.trunc(interval / 60);
+    const seconds = interval % 60;
+
+    return `${format(minutes, 2)}:${format(seconds, 2)}`;
 }
