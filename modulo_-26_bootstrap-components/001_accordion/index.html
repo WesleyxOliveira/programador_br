@@ -12,49 +12,52 @@
 
 <body>
     <section class="container">
-        <h1>Frequently asked questions</h1>
-        <div class="accordion accordion-flush">
-            <div class="accordion-item" id="faq">
+        <h1>Freuquently asked questions</h1>
+
+        <div class="accordion accordion-flush" id="faq">
+            <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collepsed" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
                         How do I create an account?
                     </button>
                 </h2>
-                <div id="item1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                <div id="item1" class="accordion-collapse collapse show">
                     <p class="accordion-body">
-                        Download the Uber app from the App Store or Google Play, then create an account with your email
-                        address and mobile phone number. A payment method is also needed before you can request a ride.
-                    </p>
-                </div>
+                     Download the Uber app from the App Store or Google Play, then create an account with your email address and mobile phone number. A payment method is also needed before you can request a ride.
+                    </p> 
+                 </div>
             </div>
 
-            <div class="accordion-item" id="faq">
+            <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collepsed" type="button" data-bs-toggle="collapse" data-bs-target="#item2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item2">
                         Is Uber available in my city?
                     </button>
                 </h2>
-                <div id="item2" class="accordion-collapse collapsed" data-bs-parent="#faq">
+                <div id="item2" class="accordion-collapse collapse">
                     <p class="accordion-body">
                         You can find Uber in more than 10,000 cities around the world.
-                    </p>
-                </div>
+                    </p> 
+                 </div>
             </div>
 
-            <div class="accordion-item" id="faq">
+            <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collepsed" type="button" data-bs-toggle="collapse" data-bs-target="#item3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item3">
                         How do I request a ride?
                     </button>
                 </h2>
-                <div id="item3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div id="item3" class="accordion-collapse collapse">
                     <p class="accordion-body">
                         When you’re ready to go, open the app and enter your destination. Then choose the ride option that best suits your needs. Confirm your pickup by tapping Confirm Pickup.
-                    </p>
-                </div>
+                    </p> 
+                 </div>
             </div>
         </div>
+
     </section>
+
+
     <!--Anotações
         1 - O data-bs-parent='#id' faz com que quando eu clique em um elemento, ele feche um outro que já esteja aberto, se eu tirar isso, quando eu clicar em um elemento, o outro não será fechado, a não ser que eu cliquee nele para fechar, esse pode ser um comportamento, se assim eu quiser.
 
@@ -64,7 +67,9 @@
 
         4 - O data-bs-toggle="collapse" serve para fazer com que o botão tenha a função de colapsar, ou esconder e mostrar o conteúdo.
 
-        4 - A classe collepsed que está no botão, muda a cor do item que está colapsado, para mostrar, qual está colapsado e qual não está.
+        4 - O data-bs-target="#elemento" Tem a função de mostrar para o botão qual o elemento ele tem que colapsar, no caso, é colocado nele o id do elemento que ele irá collapsar.
+
+        5 - A classe collepsed que está no botão, muda a cor do item que está colapsado, para mostrar, qual está colapsado e qual não está.
     -->
 
     <!--Bootstrap JS-->
