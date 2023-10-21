@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003 Collapse</title>
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    
+    <section class="container">
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target=".minha-classe">Collapse</button>
+
+        <div id="meu-cartao" class="collapse minha-classe mb-2">
+            <div class="card">
+                <div class="card-body">
+                    Este conteúdo é colapsável
+                </div>
+            </div>
+        </div>
+        
+        <div id="meu-cartao-3" class="collapse minha-classe">
+            <div class="card">
+                <div class="card-body">
+                    Este conteúdo também é colapsável
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+ <!--Bootstrap JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+ crossorigin="anonymous"></script>
+</html>
