@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>012 popover</title>
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .green-popover {
+            --bs-popover-bg: green;
+            --bs-popover-header-bg: rgb(5, 54, 5);
+            --bs-popover-header-color: white;
+            --bs-popover-body-color: white;
+        }
+    </style>
+<body>
+    <div class="container p-4">
+        <button class="btn btn-primary" data-bs-custom-class="green-popover" data-bs-content="<ol>
+            <li>Primeiro</li>
+            <li>Segundo</li>
+            <li>Terceiro</li>
+        </ol>
+        <a href='#' class='btn btn-primary'>Clique aqui</a>
+        " data-bs-html="true"
+        data-bs-custom-class="red-tooltip" data-bs-placement="bottom"
+            data-bs-toggle="popover" data-bs-title="Download">
+            <i class="bi bi-download"></i>
+        </button>
+        <button class="btn btn-primary">
+            <i class="bi bi-upload"></i>
+        </button>
+        <button class="btn btn-danger">
+            <i class="bi bi-trash"></i>
+        </button>
+    </div>
+
+    <p>Esse meu parágrafo tem um <a href="#" data-bs-toggle="tooltip" data-bs-title="Link para a página do bootstrap"
+            data-bs-placement="bottom">link</a></p>
+
+    <!--Popper-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <!--Popper JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+        </script>
+
+    <!--Enable tooltips-->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+
+</body>
+
+</html>
