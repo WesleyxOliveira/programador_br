@@ -19,10 +19,21 @@ const firebaseConfig = {
   */
 
   /* Cria referência para a pasta images que esta dentro da pasta raiz */
-  const ref = storage.ref();
+  // const ref = storage.ref('images');
 
-  ref.listAll().then(res => {
-    res.items[0].getDownloadURL().then(url => {
-        console.log(url);
-    });
+  // ref.listAll().then(res => {
+  //   res.items[0].getDownloadURL().then(url => {
+  //     console.log(url);
+  //   })
+  // })
+
+
+  // Referência para arquivo com caminho completo
+  const imagesArquivos = storage.ref('images/DEPENDE.png');
+
+
+  imagesArquivos.getDownloadURL().then(url => {
+    console.log(url);
   })
+
+
