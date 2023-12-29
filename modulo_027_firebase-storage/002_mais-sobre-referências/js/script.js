@@ -9,8 +9,10 @@ const firebaseConfig = {
   
   firebase.initializeApp(firebaseConfig);
 
-  // 1 - Criar um objeto storage
+  // 1 - Criar um objeto storage  
   const storage = firebase.storage();
+
+ /* 
 
   // 2 - Criar uma referência, nesse caso para uma pasta chamada images, mas se não passo nada como parâmetro, ficaria sendo uma referência para a pasta raiz.
   const ref = storage.ref('/images');
@@ -29,6 +31,58 @@ const firebaseConfig = {
     });
   })
 
+ */
+
+  // Um pouco mais sobre referências
+
+  // 1 - .child()
+
+  //Criando referência para uma pasta
+  const ref = storage.ref('/images');
+  //Criando referência para um filho específico de uma pasta usando o método de pasta .child()
+  const fileRef = ref.child('DEPENDE.png');
+
+  // Pegando o link para download do arquivo, através da referência criada.
+  ref.child('DEPENDE.png').getDownloadURL().then(url => {
+    console.log('Link 1: ' + url);
+  })
+
+  fileRef.getDownloadURL().then(url => {
+    console.log('Link 2: ' + url);
+  })
+
+  // 2 - .parent().
+
+  // Criando uma referência a pasta pai, do fileRef.
+  const fileParent = fileRef.parent;
+
+  fileParent.listAll().then(res => {
+    console.log(res);
+  })
+
+
+
+  // 3 .root;
+
+  // O métod root, cria uma referência a pasta raiz (método de pasta).
+   ref.root.listAll().then(res => {
+    console.log(res);
+   })
+
+   // Pegando o nome de um arquivo
+   ref.listAll().then(res => {
+    console.log(res.items[0].name);
+   })
+
+    // Pegando o caminho inteiro do elemento
+    ref.listAll().then(res => {
+      console.log(res.items[0].fullPath);
+     })
+
+
+
+
+  
 
 
 
