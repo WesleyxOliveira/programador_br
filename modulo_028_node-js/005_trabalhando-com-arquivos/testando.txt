@@ -1,0 +1,1 @@
+O método readFile em Node.js é utilizado para ler o conteúdo de um arquivo. A assinatura básica é:
