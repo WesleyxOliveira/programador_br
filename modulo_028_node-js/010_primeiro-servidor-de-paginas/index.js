@@ -12,6 +12,8 @@ http.createServer((request, response) => {
 
     let fileName = '.' + path;
 
+    console.log(fileName);
+
     fs.readFile(fileName, (error, data) => {
         if (error) {
             response.writeHead(404, { 'Content-type': 'text/html;charset="UTF-8"' });
