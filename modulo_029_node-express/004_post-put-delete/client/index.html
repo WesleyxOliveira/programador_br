@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalando express</title>
+</head>
+<body>
+    Hello World!
+
+    <script>
+        fetch('http://192.168.1.66:5000/', {method: 'post'})
+        .then(res => {
+            return res.text();
+        }).then(html => {
+            console.log(html);
+        })
+
+        fetch('http://192.168.1.66:5000/', {method: 'put'})
+        .then(res => {
+            return res.text();
+        }).then(html => {
+            console.log(html);
+        })
+
+        fetch('http://192.168.1.66:5000/', {method: 'delete'})
+        .then(res => {
+            return res.text();
+        }).then(html => {
+            console.log(html);
+        })
+    </script>
+</body>
+</html>
