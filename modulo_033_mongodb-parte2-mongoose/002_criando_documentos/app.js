@@ -41,6 +41,7 @@ const db = mongoose.connection;
 
 db.on('error', () => { console.log('houve um error')});
 
+//. O ouvinte de evento é chamado quando o banco de dados é aberto com sucesso.
 db.once('open', () => {console.log('Banco carregado...')});
 
 app.get('/', (req, res) => res.send('Hello World!'));
