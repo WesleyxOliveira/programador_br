@@ -4,7 +4,7 @@ const redirect = async (req, res)=> {
     let title = req.params.title;
 
     try {
-        let doc = await Link.findOne({ title: title });
+        let doc = await Link.findOne({title});
         console.log(doc);
 
         res.redirect(doc.url);
@@ -16,10 +16,15 @@ const redirect = async (req, res)=> {
 const addLink = async (req, res)=> {
     const link = new Link(req.body);
     try {
-        let doc = link.save();
+        let doc = await link.save();
         res.send('Link adicionado com sucesso!');
     } catch (error) {
-        res.send(error);
+        if(error.message == 'Link validation failed: url: Path `url` is required.') {
+            error.message = 'ERRO: Link é obrigatório';
+        } else if(error.message == 'Link validation failed: title: Path `title` is required.') {
+            error.message = 'ERRO: Título é obrigatório'
+        }
+        res.render('index', {error, body: req.body});
     }
     
 }
