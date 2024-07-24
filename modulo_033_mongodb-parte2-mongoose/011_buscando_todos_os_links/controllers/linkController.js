@@ -30,7 +30,7 @@ const addLink = async (req, res)=> {
 
 const allLinks = async (req, res)=> {
     let links = await Link.find({});
-    res.send(links);
+    res.render('index', {links, body: {}, error: false});
 }
 
 module.exports = {redirect, addLink, allLinks};
