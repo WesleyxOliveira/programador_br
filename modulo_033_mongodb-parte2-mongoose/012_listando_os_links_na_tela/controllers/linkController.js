@@ -1,13 +1,17 @@
 var Link = require('../models/Link');
 
-const redirect = async (req, res)=> {
+const redirect = async (req, res, next)=> {
     let title = req.params.title;
 
     try {
         let doc = await Link.findOne({title});
         console.log(doc);
 
-        res.redirect(doc.url);
+        if(doc) {
+            res.redirect(doc.url);
+        } else {
+            next();
+        }
     } catch (error) {
         res.send(error);
     }
