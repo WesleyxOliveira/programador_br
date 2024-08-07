@@ -10,7 +10,7 @@ router.get('/', linkController.allLinks);
 router.get('/:title', linkController.redirect);
 router.get('/edit/:id', linkController.loadLink);
 
-router.post('/', express.urlencoded({extended: true}, linkController.addLink));
+router.post('/', express.urlencoded({extended: true}), linkController.addLink);
 router.post('/edit', express.urlencoded({extended: true},))
 router.post('/edit/:id',express.urlencoded({extended: true}), linkController.editLink); 
 
