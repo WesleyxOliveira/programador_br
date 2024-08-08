@@ -4,7 +4,7 @@ const redirect = async (req, res, next)=> {
     let title = req.params.title;
 
     try {
-        let doc = await Link.findOne({title});
+        let doc = await Link.findOne({title}, {$inc: {clicks: 1}});
         console.log(doc);
 
         if(doc) {
